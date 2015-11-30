@@ -15,28 +15,38 @@ $temalivre= $dados['url_temalivre'];
 $painelclinico = $dados['url_painelclinico'];
 $painelcientifico = $dados['url_painelcientifico'];
 $forumclinico = $dados['url_forumclinico'];
-$excecao = $dados['excessao'];
+$excessao = $dados['excessao'];
 
 if ($busca = $nome) {
 	echo "Nome: $nome <br>";
 	if ($participacao != '') {
 		echo "Certificado de Participacao: <a href='$participacao' target='_blank'>CLIQUE AQUI</a><br>";
-		if ($temalivre != '') {
-			echo "Certificado de Tema Livre: <a href='$temalivre' target='_blank'>CLIQUE AQUI</a><br>";
-			if ($painelclinico != '') {
-				echo "Certificado de Painel Clinico: <a href='$painelclinico' target='_blank'>CLIQUE AQUI</a><br>";
-				if ($painelcientifico != '') {
-					echo "Certificado de Painel Cientifico: <a href='$painelcientifico' target='_blank'>CLIQUE AQUI</a><br>";
-					if ($forumclinico != '') {
-						echo "Certificado de Forum Clinico: <a href='$forumclinico' target='_blank'>CLIQUE AQUI</a><br>";
-						if ($excessao != '') {
-							echo "Certificado Extra: <a href='$participacao' target='_blank'>CLIQUE AQUI</a><br />";
-							echo "<hr>";
-						}
-					}
-				}
-			}
-		}
+	}
+}
+
+if ($busca = $nome) {
+	if ($temalivre != '') {
+		echo "Certificado de Tema Livre: <a href='$temalivre' target='_blank'>CLIQUE AQUI</a><br>";
+	}
+}
+if ($busca = $nome) {
+	if ($painelclinico != '') {
+	echo "Certificado de Painel Clinico: <a href='$painelclinico' target='_blank'>CLIQUE AQUI</a><br>";
+	}
+}
+if ($busca = $nome) {
+	if ($painelcientifico != '') {
+	echo "Certificado de Painel Cientifico: <a href='$painelcientifico' target='_blank'>CLIQUE AQUI</a><br>";
+	}
+}
+if ($busca = $nome) {
+	if ($forumclinico != '') {
+	echo "Certificado de Forum Clinico: <a href='$forumclinico' target='_blank'>CLIQUE AQUI</a><br>";
+	}
+}
+if ($busca = $nome) {
+	if ($excessao != '') {
+	echo "Certificado Extra: <a href='$participacao' target='_blank'>CLIQUE AQUI</a><br>";
 	}
 }
 ?>
